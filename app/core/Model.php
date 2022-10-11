@@ -4,9 +4,9 @@ namespace app\core;
 class Model{
 	protected static $_connection;
 
-	public function __construct(){
-		$server = 'localhost';//127.0.0.1
-		$dbname = 'instasham.sql';
+	public function __construct() {
+		$server = 'localhost';
+		$dbname = 'instasham';
 		$username = 'root';
 		$password = '';
 
