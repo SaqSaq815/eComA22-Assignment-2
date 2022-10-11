@@ -3,9 +3,9 @@
 
     class Main extends \app\core\Controller { 
         public function index() {
-            $profile = new \app\models\Profile();
-            $publications = $profile->getPublications();
-            $this->view('Main/home', $publications);
+            // $profile = new \app\models\Profile();
+            // $publications = $profile->getPublications();
+            $this->view('Main/home');
         }
 
         public function searchByID() {

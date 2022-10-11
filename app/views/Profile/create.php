@@ -6,6 +6,7 @@
 	</head>
 
 	<body>
+		<?php require 'app\views\includes\header.php'; ?>
 		<?php require 'app\views\includes\error.php'; ?>
 
 		<h1>Profile Creation</h1>
@@ -18,8 +19,6 @@
 			<label>Last Name:<input type="text" name="last_name" required/></label><br>
 			<input type="submit" name="action" value="Save" />
 		</form>
-
-		<a href="/User/logout">Log out</a>
 
 	</body>
 </html>

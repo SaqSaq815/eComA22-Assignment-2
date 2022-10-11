@@ -6,7 +6,7 @@
 	</head>
 
 	<body>
-
+		<?php require 'app\views\includes\header.php'; ?>
 		<?php require 'app\views\includes\error.php'; ?>
 		
 		<h1>Registration</h1>

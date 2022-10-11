@@ -6,6 +6,7 @@
 	</head>
 
 	<body>
+		<?php require 'app\views\includes\header.php'; ?>
 		<?php require 'app\views\includes\error.php'; ?>
 		
 		<h1>Login</h1>
@@ -16,8 +17,6 @@
 			<label>Password:<input type="password" name="password" /></label><br>
 			<input type="submit" name="action" value="Login" />
 		</form>
-		
-		<a href="/User/register">Register</a>
 
 	</body>
 </html>

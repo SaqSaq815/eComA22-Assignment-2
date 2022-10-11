@@ -13,7 +13,7 @@
 					$profile = new \app\models\Profile();
 					$profile = $profile->getByUserID($_SESSION['user_id']);
 					$_SESSION['profile_id'] = $profile->profile_id;
-					header('location:/Profile/create');
+					header('location:/Profile/index');
 				}else{
 					header('location:/User/index?error=Wrong username/password combination!');
 				}
