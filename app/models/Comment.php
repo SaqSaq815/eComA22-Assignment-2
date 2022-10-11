@@ -32,4 +32,5 @@
 		    $STMT = self::$_connection->prepare($SQL);
 		    $STMT->execute(['comment_id'=>$this->comment_id]);
         }
+        
     }
