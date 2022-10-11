@@ -21,6 +21,9 @@ SET time_zone = "+00:00";
 -- Database: `instasham`
 --
 
+CREATE DATABASE IF NOT EXISTS `instasham` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `instasham`;
+
 -- --------------------------------------------------------
 
 --
@@ -31,7 +34,7 @@ CREATE TABLE `comment` (
   `comment_id` int(11) NOT NULL,
   `publication_id` int(11) NOT NULL,
   `profile_id` int(11) NOT NULL,
-  `comment` text NOT NULL,
+  `comment_text` text NOT NULL,
   `date_time` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
