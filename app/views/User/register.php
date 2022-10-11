@@ -6,23 +6,16 @@
 	</head>
 
 	<body>
+
+		<?php require 'app\views\includes\error.php'; ?>
+		
 		<h1>Registration</h1>
 		<p>Create your profile here</p>
-		
-		<?php
-			if(isset($_GET['error'])){
-		?>
-		<div class="alert alert-danger" role="alert">
-			<?=$_GET['error']?>
-		</div>
-		<?php
-			}
-		?>
 
 		<form action='' method='post'>
-			<label>Username:<input type="text" name="username" /></label><br>
-			<label>Password:<input type="password" name="password" /></label><br>
-			<label>Password Confirmation:<input type="password" name="password_confirm" /></label><br>
+			<label>Username:<input type="text" name="username" required/></label><br>
+			<label>Password:<input type="password" name="password" required/></label><br>
+			<label>Password Confirmation:<input type="password" name="password_confirm" required/></label><br>
 			<input type="submit" name="action" value="Register" />
 		</form>
 	</body>

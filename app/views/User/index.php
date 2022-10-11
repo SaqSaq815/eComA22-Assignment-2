@@ -6,17 +6,10 @@
 	</head>
 
 	<body>
+		<?php require 'app\views\includes\error.php'; ?>
+		
 		<h1>Login</h1>
 		<p>Log in here</p>
-		<?php
-			if(isset($_GET['error'])){
-		?>
-		<div class="alert alert-danger" role="alert">
-			<?=$_GET['error']?>
-		</div>
-		<?php
-			}
-		?>
 
 		<form action='' method='post'>
 			<label>Username:<input type="text" name="username" /></label><br>
