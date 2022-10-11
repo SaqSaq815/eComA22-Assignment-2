@@ -11,6 +11,14 @@
             return $STMT->fetch();
         }
 
+        public function getByUserID($user_id) {
+            $SQL = "SELECT * FROM profile WHERE user_id=:user_id";
+            $STMT = self::$_connection->prepare($SQL);
+            $STMT->execute(['user_id'=>$user_id]);
+            $STMT->setFetchMode(\PDO::FETCH_CLASS, 'app\models\Profile');
+            return $STMT->fetch();
+        }
+
         public function insert() {
             $SQL = "INSERT INTO profile(user_id, first_name, middle_name, last_name) VALUES (:user_id, :first_name, :middle_name , :last_name)";
 		    $STMT = self::$_connection->prepare($SQL);

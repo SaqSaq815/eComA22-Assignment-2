@@ -10,6 +10,9 @@
 				if(password_verify($_POST['password'], $user->password_hash)) {
 					$_SESSION['user_id'] = $user->user_id;
 					$_SESSION['username'] = $user->username;
+					$profile = new \app\models\Profile();
+					$profile = $profile->getByUserID($_SESSION['user_id']);
+					$_SESSION['profile_id'] = $profile->profile_id;
 					header('location:/Profile/create');
 				}else{
 					header('location:/User/index?error=Wrong username/password combination!');
@@ -40,5 +43,8 @@
 			}		
 		}
 
-		
+		public function logout(){
+			session_destroy();
+			header('location:/User/index');
+		}
 	}
