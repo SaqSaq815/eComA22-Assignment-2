@@ -1,10 +1,8 @@
 <?php
 namespace app\controllers;
 
-class Post extends \app\core\Controller {
+class Person extends \app\core\Controller {
     public function index() {
         
     }
-
-    
 }
