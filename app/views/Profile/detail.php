@@ -10,8 +10,38 @@
 		<?php require 'app\views\includes\error.php'; ?>
 
 		<h1>Your Profile</h1>
+		<?php
+			$profile = new \app\models\Profile();
+			$profile = $profile->getByUserID($_SESSION['user_id']);
 
-		
+			echo "
+				<dl>
+					<dt>
+						First Name:
+					</dt>
+
+					<dd>
+						$profile->first_name
+					</dd>
+
+					<dt>
+						Middle Name:
+					</dt>
+
+					<dd>
+						$profile->middle_name
+					</dd>
+
+					<dt>
+						Last Name:
+					</dt>
+					
+					<dd>
+						$profile->last_name
+					</dd>
+				</dl>"	
+		?>
+		<a href='/Profile/edit'>Edit Profile</a>
 
 	</body>
 
