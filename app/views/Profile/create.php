@@ -16,7 +16,7 @@
 			<label>First Name:<input type="text" name="first_name" required/></label><br>
 			<label>Middle Name:<input type="text" name="middle_name"/></label><br>
 			<label>Last Name:<input type="text" name="last_name" required/></label><br>
-			<input type="submit" name="action" value="Submit" />
+			<input type="submit" name="action" value="Save" />
 		</form>
 
 		<a href="/User/logout">Log out</a>

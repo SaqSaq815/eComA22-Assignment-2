@@ -10,11 +10,19 @@
         }
 
         #[\app\filters\User]
-		public function createProfile() {
-            $this->view('Profile/profileCreation');
+		public function create() {
+            $this->view('Profile/create');
 			if(isset($_POST['action'])) {
-				$profile = new \app\models\Profile();
-			}
+				$newProfile = new \app\models\Profile();
+                $newProfile->user_id = $_SESSION['user_id'];
+                $newProfile->first_name = $_POST['first_name'];
+                $newProfile->middle_name = $_POST['middle_name'];
+                $newProfile->last_name = $_POST['last_name'];
+                $newProfile->insert();
+                header('location:/Profile/detail');
+			} else {
+                $this->view('Profile/detail');
+            }
 		}
 
         public function update() {
