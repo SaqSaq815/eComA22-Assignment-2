@@ -4,8 +4,8 @@
     class Profile extends \app\core\Controller {
 
         public function index() {
-            $profile = new \app\models\Profile();
-            $publications = $profile->getPublications();
+            $publication = new \app\models\Publication();
+            $publications = $publication->getPublications();
             $this->view('Profile/index', $publications);
         }
 
@@ -28,7 +28,7 @@
 
                 header('location:/Profile/index');
 			} else {
-                $this->view('Profile/profileEditing');
+                $this->view('Profile/edit');
             }
             $profile = new \app\models\Profile();
             

@@ -10,8 +10,7 @@
 				if(password_verify($_POST['password'], $user->password_hash)) {
 					$_SESSION['user_id'] = $user->user_id;
 					$_SESSION['username'] = $user->username;
-					$_SESSION['role'] = $user->role;
-					header('location:/Profile/profileCreation');
+					$this->view('Profile/create');
 				}else{
 					header('location:/User/index?error=Wrong username/password combination!');
 				}

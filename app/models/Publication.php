@@ -11,6 +11,13 @@
             return $STMT->fetchAll();
         }
 
+        public function getPublications() {
+            $SQL = "SELECT * FROM publication";
+            $STMT = self::$_connection->prepare($SQL);
+            $STMT->setFetchMode(\PDO::FETCH_CLASS, 'app\models\Publication');
+            return $STMT->fetchAll();
+        }
+
         public function insert() {
             $SQL = "INSERT INTO publication(profile_id, picture, caption, date_time) VALUES (:profile_id, :picture, :caption, :date_time)";
             $STMT = self::$_connection->prepare($SQL);

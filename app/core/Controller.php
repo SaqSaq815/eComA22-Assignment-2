@@ -18,8 +18,7 @@ class Controller{
 			 $filename = uniqid() . ".$ext";
 			 move_uploaded_file($file['tmp_name'], 'images/'.$filename);
 			 return $filename;
-		}else
+		} else
 			return '';
 	}
-
 }
