@@ -6,6 +6,8 @@
 	</head>
 
 	<body>
+		<h1>Login</h1>
+		<p>Log in here</p>
 		<?php
 			if(isset($_GET['error'])){
 		?>
@@ -21,6 +23,8 @@
 			<label>Password:<input type="password" name="password" /></label><br>
 			<input type="submit" name="action" value="Login" />
 		</form>
-		<a href="User\register">Register</a>
+		
+		<a href="/User/register">Register</a>
+
 	</body>
 </html>

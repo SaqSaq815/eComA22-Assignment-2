@@ -6,6 +6,9 @@
 	</head>
 
 	<body>
+		<h1>Registration</h1>
+		<p>Create your profile here</p>
+		
 		<?php
 			if(isset($_GET['error'])){
 		?>
