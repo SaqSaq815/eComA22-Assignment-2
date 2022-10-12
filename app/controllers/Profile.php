@@ -34,10 +34,9 @@
                 $profile->middle_name = $_POST['middle_name'];
 			    $profile->last_name = $_POST['last_name'];
                 $profile->update();
-
                 header('location:/Profile/index');
 			} else {
-                $this->view('Profile/update');
+                $this->view('Profile/update', $profile);
             }
             $profile = new \app\models\Profile();
             
