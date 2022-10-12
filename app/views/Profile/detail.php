@@ -46,7 +46,7 @@
 					<td type=name>$item->publication_id</td>
 					<td type=name>$item->caption</td>
 					<td type=action>
-					<a href='/Publication/edit/$item->publication_id'>edit</a> | 
+					<a href='/Publication/update/$item->publication_id'>edit</a> | 
 					<a href='/Publication/detail/$item->publication_id'>details</a> |
 					<a href='/Publication/delete/$item->publication_id'>delete</a> |
 					</td>

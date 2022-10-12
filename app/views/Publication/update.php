@@ -14,10 +14,10 @@
 		<h1>Edit Profile</h1>
 
 		<form action='' method='post'>	
-			<?php echo "<label>First Name:<input type=\"text\" name=\"first_name\" value=\"$data->first_name\" required/></label><br>
-				<label>Middle Name:<input type=\"text\" name=\"middle_name\" value=\"$data->middle_name\"/></label><br>
-				<label>Last Name:<input type=\"text\" name=\"last_name\" value=\"$data->last_name\" required/></label><br>
-				<input type=\"submit\" name=\"action\" value=\"Edit Profile\" />";
+			<?php echo "
+				
+				<label>Caption:<input type=\"textarea\" name=\"caption\"/></label><br>
+				<input type=\"submit\" name=\"action\" value=\"Edit Post\" />";
 			?>
 		</form>
 
