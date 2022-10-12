@@ -41,7 +41,7 @@
 					</dd>
 				</dl>"	
 		?>
-		<a href='/Profile/edit'>Edit Profile</a>
+		<a href='/Profile/update'>Edit Profile</a>
 
 	</body>
 

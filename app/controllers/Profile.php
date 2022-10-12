@@ -29,7 +29,7 @@
 
         public function update() {
             $profile = new \app\models\Profile();
-            $profile = $profile->get($profile_id);
+            $profile = $profile->get($_SESSION['profile_id']);
             if(isset($_POST['action'])) {
 				$profile->first_name = $_POST['first_name'];
                 $profile->middle_name = $_POST['middle_name'];
@@ -38,7 +38,7 @@
 
                 header('location:/Profile/index');
 			} else {
-                $this->view('Profile/edit');
+                $this->view('Profile/update');
             }
             $profile = new \app\models\Profile();
             
