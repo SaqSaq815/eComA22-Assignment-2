@@ -17,26 +17,25 @@
                 Caption:
             </dt>
             <dd>
-                <?= $data->caption ?>
+                <?= $data['publication']->caption ?>
             </dd>
             <dt>
                 Comments:
             </dt>
             <dd>
                 <?php
-                foreach ($data as $item) {
-                echo "<tr>
-                    <td type=name>$item->comment_id</td>
-                    <td type=name>$item->comment_text</td>
-                    
-                    </tr><br>";
+                    foreach ($data['comment'] as $item) {
+                        echo "<tr>
+                            <td type=name>$item->comment_id</td>
+                            <td type=name>$item->comment_text</td>
+                            </tr><br>";
                     }
                 ?>
             
             </dd>
 
             <dd>
-                <a href='/Comment/create/<?= $data->publication_id?>'>add Comment</a>
+                <a href='/Comment/create/<?= $data['publication']->publication_id?>'>add Comment</a>
             </dd>
         </dl>
 
@@ -44,7 +43,7 @@
 
 
         <script>
-            file = "" + "<?= $data->picture ?>"
+            file = "" + "<?= $data['publication']->picture ?>"
             if (file != "") {
                 document.getElementById("picture_preview").src = "/images/" + file;
             }

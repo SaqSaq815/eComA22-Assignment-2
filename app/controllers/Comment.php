@@ -16,12 +16,14 @@
                 $comment->comment_text = $_POST['comment_text'];
                 $comment->date_time = date('Y-m-d H:i:s');
                 $comment->insert();
-                header('location:/Publication/detail/' . $publication_id);
+                $comments = new \app\models\Comment();
+                $comments = $comments->getByPublication($publication_id);
+                $publication = new \app\models\Publication();
+                $publication = $publication->get($publication_id);
+                $this->view('Publication/detail', ['publication'=>$publication, 'comment'=>$comments]);
             }else{
                 $this->view('Publication/addComment');
             }
-
-
         }
 
         public function update() {

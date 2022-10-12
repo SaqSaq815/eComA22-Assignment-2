@@ -11,6 +11,14 @@
             return $STMT->fetch();
         }
 
+        public function getByPublication($publication_id) {
+            $SQL = "SELECT * FROM comment WHERE publication_id=:publication_id";
+            $STMT = self::$_connection->prepare($SQL);
+            $STMT->execute(['publication_id'=>$publication_id]);
+            $STMT->setFetchMode(\PDO::FETCH_CLASS, 'app\models\Comment');
+            return $STMT->fetchAll();
+        }
+
         public function insert() {
             $SQL = "INSERT INTO comment(publication_id, profile_id, comment_text, date_time) VALUES (:publication_id, :profile_id, :comment_text, :date_time)";
             $STMT = self::$_connection->prepare($SQL);

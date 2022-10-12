@@ -6,7 +6,9 @@
         public function detail($publication_id) {
             $publication = new \app\models\Publication();
             $publication = $publication->get($publication_id);
-            $this->view('Publication/detail', $publication);
+            $comment = new \app\models\Comment();
+            $comment = $comment->getByPublication($publication_id);
+            $this->view('Publication/detail', ['publication'=>$publication, 'comment'=>$comment]);
         }
 
         public function create() {
