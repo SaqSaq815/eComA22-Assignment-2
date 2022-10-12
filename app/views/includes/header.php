@@ -1,6 +1,7 @@
 <div class="nav">
     <a href='/Main/index'>Home</a>
     <?php if(isset($_SESSION['user_id'])) { ?>
+        <a href="/Publication/create">Create a Post</a>
         <a href="/Profile/index">Profile</a>
         <a href="/User/logout">Log out</a>
     <?php } else { ?>

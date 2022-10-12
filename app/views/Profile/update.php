@@ -13,9 +13,9 @@
 
 	<h1>Your Profile</h1>
 
-	<form action='' method='post'>
+	<form action='' method='post'>	
 			<label>First Name:<input type="text" name="first_name" required/></label><br>
-			<label>Middle Name:<input type="text" name="middle_name" required /></label><br>
+			<label>Middle Name:<input type="text" name="middle_name" /></label><br>
 			<label>Last Name:<input type="text" name="last_name" required/></label><br>
 			<input type="submit" name="action" value="Edit Profile" />
 	</form>
