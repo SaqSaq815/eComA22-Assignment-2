@@ -3,11 +3,6 @@
 
     class Publication extends \app\core\Controller {
 
-        public function index() {
-            $publication = new \app\models\Publication();
-            $publication = $publication->getPublications();
-        }
-
         public function detail($publication_id) {
             $publication = new \app\models\Publication();
             $publication = $publication->get($publication_id);
