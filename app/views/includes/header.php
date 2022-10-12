@@ -1,11 +1,11 @@
-<div class="nav">
-    <a href='/Main/index'>Home</a>
+<ul class="navbar">
+    <li><a href='/Main/index'>Home</a></li>
     <?php if(isset($_SESSION['user_id'])) { ?>
-        <a href="/Publication/create">Create a Post</a>
-        <a href="/Profile/index">Profile</a>
-        <a href="/User/logout">Log out</a>
+        <li><a href="/Publication/create">Create a Post</a></li>
+        <li><a href="/Profile/index">Profile</a></li>
+        <li style="float:right"><a href="/User/logout">Log out</a></li>
     <?php } else { ?>
-        <a href="/User/login">Log In</a>
-        <a href="/User/register">Register</a>
+        <li style="float:right"><a href="/User/login">Log In</a></li>
+        <li style="float:right"><a href="/User/register">Register</a></li>
     <?php } ?>
-</div>
+</ul>

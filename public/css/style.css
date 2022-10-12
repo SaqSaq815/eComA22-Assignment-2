@@ -1,0 +1,98 @@
+body {
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+}
+
+.main {
+  padding: 0em 2em;
+}
+  
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+.navbar li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+.navbar li:last-child {
+  border-right: none; 
+}
+
+.navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar li a:hover {
+  background-color: #111;
+}
+
+h1 {
+  text-align: center;
+  padding: 0.4em;
+}
+
+h2 {
+  text-align: center;
+}
+
+#owned_publication {
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+input[type=textarea] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+footer {
+  text-align: right;
+  height: 50px;
+  bottom: 10;
+  background-color: rgb(161, 161, 161);
+  color: rgb(0, 0, 0);
+}

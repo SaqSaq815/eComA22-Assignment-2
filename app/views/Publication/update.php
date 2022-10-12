@@ -15,7 +15,7 @@
 
 		<form action='' method='post'>	
 			<?php echo "
-				
+            
 				<label>Caption:<input type=\"textarea\" name=\"caption\"/></label><br>
 				<input type=\"submit\" name=\"action\" value=\"Edit Post\" />";
 			?>
