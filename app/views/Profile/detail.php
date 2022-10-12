@@ -39,8 +39,22 @@
 					<dd>
 						$profile->last_name
 					</dd>
-				</dl>"	
+				</dl>";
+
+			foreach ($data as $item) {
+				echo "<tr>
+					<td type=name>$item->publication_id</td>
+					<td type=name>$item->caption</td>
+					<td type=action>
+					<a href='/Publication/edit/$item->publication_id'>edit</a> | 
+					<a href='/Publication/detail/$item->publication_id'>details</a> |
+					<a href='/Publication/delete/$item->publication_id'>delete</a> |
+					</td>
+					</tr><br>";
+			}
 		?>
+
+
 		<a href='/Profile/update'>Edit Profile</a>
 
 	</body>

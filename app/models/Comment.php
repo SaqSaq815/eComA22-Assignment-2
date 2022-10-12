@@ -1,14 +1,14 @@
 <?php
     namespace app\models;
 
-    class Comment {
+    class Comment extends \app\core\Model {
         
         public function get($comment_id) {
             $SQL = "SELECT * FROM comment WHERE comment_id=:comment_id";
             $STMT = self::$_connection->prepare($SQL);
             $STMT->execute(['comment_id'=>$comment_id]);
             $STMT->setFetchMode(\PDO::FETCH_CLASS, 'app\models\Comment');
-            return $STMT->fetchAll();
+            return $STMT->fetch();
         }
 
         public function insert() {

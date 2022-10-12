@@ -5,13 +5,12 @@
 
         public function index() {
             if (isset($_SESSION['profile_id'])) {
-                $this->view('Profile/detail');
+                $publication = new \app\models\Publication();
+                $publications = $publication->getPublicationsByProfile($_SESSION['profile_id']);
+                $this->view('Profile/detail', $publications);
             } else {
                 $this->view('Profile/create');
             }
-            // $publication = new \app\models\Publication();
-            // $publications = $publication->getPublications();
-            
         }
 
         #[\app\filters\User]

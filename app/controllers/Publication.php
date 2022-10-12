@@ -4,14 +4,28 @@
     class Publication extends \app\core\Controller {
 
         public function index() {
+            $publication = new \app\models\Publication();
+            $publication = $publication->getPublications();
+        }
 
+        public function detail($publication_id) {
+            $publication = new \app\models\Publication();
+            $publication = $publication->get($publication_id);
+            $this->view('Publication/detail', $publication);
         }
 
         public function create() {
-            $this->view('Publication/create');
             if (isset($_POST['action'])) {
                 $publication = new \app\models\Publication();
-                $publication->profile_id
+                $publication->profile_id = $_SESSION['profile_id'];
+                $filename = $this->saveFile($_FILES['picture']);
+                $publication->picture = $filename;
+                $publication->caption = $_POST['caption'];
+                $publication->date_time = date('Y-m-d H:i:s');
+                $publication->insert();
+                header('location:/Profile/detail/' . $_SESSION['profile_id']);
+            } else {
+                $this->view('Publication/create');
             }
         }
 
