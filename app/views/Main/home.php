@@ -11,7 +11,11 @@
 
 		<h1>Home Page</h1>
 
-		
+		<?php 
+			foreach ($data as $item) {
+				echo "<a href='/Publication/detail/$item->publication_id'>$item->publication_id: $item->caption</a></br>";
+			}
+		?>
 
 	</body>
 
