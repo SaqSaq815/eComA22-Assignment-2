@@ -18,9 +18,12 @@
 					<input type="file" name="picture" id="picture" required/>
 					Upload
 				</label>
+				
 				<img id='picture_preview' src='/images/blank.jpg' style="max-width:200px;max-height:200px" /><br>
+				
 				<label for="caption">Caption</label>
 				<input type="textarea" id="caption" name="caption"/><br>
+
 				<input type="submit" name="action" value="Save" />
 			</form>
 
