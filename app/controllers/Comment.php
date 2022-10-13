@@ -6,6 +6,7 @@
         public function index() {
             $comment = new \app\models\Comment();
             $comment = $comment->get($comment_id);
+            $this->view('Publication/detail');
         }
 
         public function create($publication_id) {
@@ -26,8 +27,20 @@
             }
         }
 
-        public function update() {
+        public function update($comment_id) {
+            $comment = new \app\models\Comment();
+            $comment = $comment->get($comment_id);
 
+            $publication_id = $comment->publication_id;
+
+            if(isset($_POST['action'])){
+                $comment->comment_text = $_POST['comment'];
+                $comment->update();
+                header('location:/Publication/detail/'. $publication_id);
+                //header('location:/Publication/index'. $_SESSION['publication_id']);
+            }else{
+                $this->view('Publication/updateComment');
+            }
         }
 
         public function delete($comment_id) {
