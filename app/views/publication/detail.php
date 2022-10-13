@@ -32,6 +32,11 @@
                             echo "<tr>
                                 <td type=name>$item->comment_id</td>
                                 <td type=name>$item->comment_text</td>
+                                <td type=action>
+                                <a href='/Publication/update/$item->publication_id'>edit</a>  
+                                |
+                                <a href='/Comment/delete/$item->comment_id'>delete</a> |
+                                </td>
                                 </tr><br>";
                         }
                     ?>

@@ -30,7 +30,14 @@
 
         }
 
-        public function delete() {
+        public function delete($comment_id) {
+            $comment = new \app\models\Comment();
+            $comment = $comment->get($comment_id);
 
+            //$publication = $comment->profile_id;
+            $publication_id = $comment->publication_id;
+
+            $comment->delete();
+            header('location:/Publication/detail/' . $publication_id);
         }
     }
