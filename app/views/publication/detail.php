@@ -9,44 +9,26 @@
         <?php require 'app\views\includes\header.php'; ?>
 		<?php require 'app\views\includes\error.php'; ?>
         <div class="main">
-            <h1>Publication Detail</h1>
-            <dl>
-                <dt>
-                    Picture:
-                </dt>
-                <dd>
-                <img src="/images/blank.jpg" style="max-width:200px;max-height:200px" id="picture_preview" />
-                </dd>
-                <dt>
-                    Caption:
-                </dt>
-                <dd>
-                    <?= $data['publication']->caption ?>
-                </dd>
-                <dt>
-                    Comments:
-                </dt>
-                <dd>
-                    <?php
-                        foreach ($data['comment'] as $item) {
-                            echo "<tr>
-                                <td type=name>$item->comment_id</td>
-                                <td type=name>$item->comment_text</td>
-                                <td type=action>
-                                <a href='/Comment/update/$item->comment_id'>edit</a>  
-                                |
-                                <a href='/Comment/delete/$item->comment_id'>delete</a> |
-                                </td>
-                                </tr><br>";
-                        }
-                    ?>
-                
-                </dd>
 
-                <dd>
-                    <a href='/Comment/create/<?= $data['publication']->publication_id?>'>add Comment</a>
-                </dd>
-            </dl>
+            <img src="/images/blank.jpg" style="max-width:200px;max-height:200px" id="picture_preview" />
+            <h2><?= $data['publication']->caption ?></h2>
+            
+            <?php
+                foreach ($data['comment'] as $item) {
+                    echo "<tr>
+                        <td type=name>$item->comment_id</td>
+                        <td type=name>$item->comment_text</td>
+                        <td type=action>
+                        <a href='/Comment/update/$item->comment_id'>edit</a>  
+                        |
+                        <a href='/Comment/delete/$item->comment_id'>delete</a> |
+                        </td>
+                        </tr><br>";
+                }
+            ?>
+                
+
+             <a href='/Comment/create/<?= $data['publication']->publication_id?>'>add Comment</a>
         </div>
         <script>
             file = "" + "<?= $data['publication']->picture ?>"

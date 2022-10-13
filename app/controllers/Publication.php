@@ -29,23 +29,17 @@
         public function update($publication_id) {
             $publication = new \app\models\Publication();
             $publication = $publication->get($publication_id);
-
             $profile_id = $publication->profile_id;
 
-            if(isset($_POST['action'])){
-                // $filename = $this->saveFile($_FILES['picture']);
-                // if($filename){
-                //     $publication->picture = $filename;
-                // }
+            if(isset($_POST['action'])) {
                 $publication->caption = $_POST['caption'];
                 $publication->update();
                 header('location:/Profile/detail/' . $_SESSION['profile_id']);
-            }else{
-                $newPublication = new \app\models\Publication();
-                $comment = new \app\models\Comment();
-                $comment = $comment->getByPublication($publication_id);
-                $newPublication = $newPublication->get($publication_id);
-                $this->view('Publication/update', ['publication'=>$publication, 'comment'=>$comment]);
+            } else {
+                $publication = new \app\models\Publication();
+                $publication = $publication->get($publication_id);
+                
+                $this->view('Publication/update', $publication);
             }
         }
 

@@ -11,13 +11,19 @@
 		<?php require 'app\views\includes\error.php'; ?>
 		<div class="main">
 			<h1>Profile Creation</h1>
-			<p>Before you can do anything, you need to complete your user profile</p>
-			<p>You can always come back to edit your info</p>
+			<p>Before you can do anything, you need to complete your user profile.</p>
+			<p>You can always come back to edit your info!</p>
 
 			<form action='' method='post'>
-				<label>First Name:<input type="text" name="first_name" required/></label><br>
-				<label>Middle Name:<input type="text" name="middle_name"/></label><br>
-				<label>Last Name:<input type="text" name="last_name" required/></label><br>
+				<label for="first_name">First Name</label>
+				<input type="text" id="first_name" name="first_name" required/><br>
+
+				<label for="middle_name">Middle Name</label>
+				<input type="text" id="middle_name" name="middle_name" placeholder="Optional" required/><br>
+
+				<label for="last_name">Last Name</label>
+				<input type="text" id="last_name" name="last_name" required/><br>
+
 				<input type="submit" name="action" value="Save" />
 			</form>
 		</div>

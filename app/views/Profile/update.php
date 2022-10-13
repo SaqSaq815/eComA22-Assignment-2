@@ -13,13 +13,15 @@
 		<?php require 'app\views\includes\header.php'; ?>
 		<?php require 'app\views\includes\error.php'; ?>
 		<div class="main">
-		<h1>Edit Profile</h1>
-			<form action='' method='post'>	
-				<?php echo "<label>First Name:<input type=\"text\" name=\"first_name\" value=\"$data->first_name\" required/></label><br>
-					<label>Middle Name:<input type=\"text\" name=\"middle_name\" value=\"$data->middle_name\"/></label><br>
-					<label>Last Name:<input type=\"text\" name=\"last_name\" value=\"$data->last_name\" required/></label><br>
-					<input type=\"submit\" name=\"action\" value=\"Edit Profile\" />";
-				?>
+			<h1>Edit Profile</h1>
+			<form action='' method='post'>
+				<label for="first_name">First Name</label>	
+				<?php echo "<input type=\"text\" id=\"first_name\" name=\"first_name\" value=\"$data->first_name\" required/></label><br>"; ?>
+				<label for="middle_name">Middle Name</label>	
+				<?php echo "<input type=\"text\" id=\"middle_name\" name=\"middle_name\" value=\"$data->middle_name\" required/></label><br>"; ?>
+				<label for="last_name">Last Name</label>	
+				<?php echo "<input type=\"text\" id=\"last_name\" name=\"last_name\" value=\"$data->last_name\" required/></label><br>"; ?>
+				<input type="submit" name="action" value="Edit Profile" />
 			</form>
 		</div>
 

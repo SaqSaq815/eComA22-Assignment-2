@@ -74,6 +74,37 @@ input[type=textarea] {
   box-sizing: border-box;
 }
 
+input[type=file] {
+  display: none;
+}
+
+.file_upload {
+  color: white;
+  background-color: #4CAF50;
+  border-radius: 20px;
+  padding: 10px 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15%;
+  cursor: pointer;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.file_upload:hover {
+  background-color: #45a049;
+}
+
+#picture_preview {
+  border: 2px solid #ccc;
+  display: block;
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 input[type=submit] {
   width: 100%;
   background-color: #4CAF50;

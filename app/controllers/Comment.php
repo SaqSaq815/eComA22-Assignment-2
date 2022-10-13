@@ -39,7 +39,7 @@
                 header('location:/Publication/detail/'. $publication_id);
                 //header('location:/Publication/index'. $_SESSION['publication_id']);
             }else{
-                $this->view('Publication/updateComment');
+                $this->view('Publication/updateComment', $comment);
             }
         }
 

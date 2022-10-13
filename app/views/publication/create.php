@@ -14,11 +14,16 @@
 
 			<form action='' method='post' enctype='multipart/form-data'>
 
-				<label>Picture:<input type="file" name="picture" id="picture" required/></label>
-
+				<label class="file_upload">
+					<input type="file" name="picture" id="picture" required/>
+					Upload
+				</label>
+				
 				<img id='picture_preview' src='/images/blank.jpg' style="max-width:200px;max-height:200px" /><br>
 				
-				<label>Caption:<input type="textarea" name="caption"/></label><br>
+				<label for="caption">Caption</label>
+				<input type="textarea" id="caption" name="caption"/><br>
+
 				<input type="submit" name="action" value="Save" />
 			</form>
 
