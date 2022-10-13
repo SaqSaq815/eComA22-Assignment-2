@@ -26,6 +26,7 @@
             }
 		}
 
+        #[\app\filters\User]
         public function update() {
             $profile = new \app\models\Profile();
             $profile = $profile->get($_SESSION['profile_id']);

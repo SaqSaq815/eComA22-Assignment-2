@@ -35,6 +35,16 @@
             if (file != "") {
                 document.getElementById("picture_preview").src = "/images/" + file;
             }
+
+            <?php
+            if(isset($_GET['error'])){
+            ?>
+            <div class="alert alert-danger" role="alert">
+                <?=$_GET['error']?>
+            </div>
+            <?php
+                }
+            ?>
         </script>
     </body>
 </html>

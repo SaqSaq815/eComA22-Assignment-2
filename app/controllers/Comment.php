@@ -27,6 +27,7 @@
             }
         }
 
+        #[\app\filters\Profile]
         public function update($comment_id) {
             $comment = new \app\models\Comment();
             $comment = $comment->get($comment_id);
@@ -43,6 +44,7 @@
             }
         }
 
+    #[\app\filters\Profile]
         public function delete($comment_id) {
             $comment = new \app\models\Comment();
             $comment = $comment->get($comment_id);

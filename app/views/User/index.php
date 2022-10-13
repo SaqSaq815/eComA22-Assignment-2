@@ -9,6 +9,7 @@
 	<body>
 		<?php require 'app\views\includes\header.php'; ?>
 		<?php require 'app\views\includes\error.php'; ?>
+
 		<div class="main">
 			<h1>Log in</h1>
 
@@ -20,5 +21,14 @@
 				<input type="submit" name="action" value="Login" />
 			</form>
 		</div>
+		<?php
+			if(isset($_GET['error'])){
+		?>
+		<div class="alert alert-danger" role="alert">
+			<?=$_GET['error']?>
+		</div>
+		<?php
+			}
+		?>
 	</body>
 </html>

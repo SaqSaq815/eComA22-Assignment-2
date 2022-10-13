@@ -2,7 +2,7 @@
     namespace app\controllers;
 
     class Publication extends \app\core\Controller {
-
+        #[\app\filters\User]
         public function detail($publication_id) {
             $publication = new \app\models\Publication();
             $publication = $publication->get($publication_id);
@@ -26,6 +26,7 @@
             }
         }
 
+        #[\app\filters\User]
         public function update($publication_id) {
             $publication = new \app\models\Publication();
             $publication = $publication->get($publication_id);
@@ -43,6 +44,7 @@
             }
         }
 
+        #[\app\filters\User]
         public function delete($publication_id) {
             $publication = new \app\models\Publication();
             $publication = $publication->get($publication_id);
