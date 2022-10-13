@@ -11,6 +11,15 @@
             return $STMT->fetch();
         }
 
+        public function searchByCaption($caption){
+            $SQL = "SELECT * FROM publication WHERE caption like :caption";
+            $STMT = self::$_connection->prepare($SQL);
+            $STMT->execute(['caption'=>'%'.$caption.'%']);
+            $STMT->setFetchMode(\PDO::FETCH_CLASS, 'app\models\Publication');
+            return $STMT->fetchAll();
+
+        }
+
         public function getPublications() {
             $SQL = "SELECT * FROM publication";
             $STMT = self::$_connection->prepare($SQL);
