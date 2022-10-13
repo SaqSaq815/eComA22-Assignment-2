@@ -10,11 +10,11 @@
 		<?php require 'app\views\includes\header.php'; ?>
 		<?php require 'app\views\includes\error.php'; ?>
 		<div class="main">
-			<h1>Post Creation</h1>
+			<h1>Write a Comment</h1>
 
 			<form action='' method='post' enctype='multipart/form-data'>
-				
-				<label>Comment:<input type="textarea" name="comment_text"/></label><br>
+				<label for="comment">Comment</label>
+				<input type="textarea" id="comment" name="comment_text"/><br>
 				<input type="submit" name="action" value="Post Comment" />
 			</form>
 		</div>
